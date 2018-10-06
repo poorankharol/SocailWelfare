@@ -3,34 +3,41 @@ package com.kharol.sociallabourwelfare.activities;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.kharol.sociallabourwelfare.fragment.CategoryFragment;
+import com.kharol.sociallabourwelfare.fragment.HomeFragment;
 import com.kharol.sociallabourwelfare.helper.BottomNavigationViewHelper;
 import com.kharol.sociallabourwelfare.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        public boolean onNavigationItemSelected(@NonNull MenuItem item)
+        {
+            Fragment fragment=null;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
+                    fragment=new HomeFragment();
+                    break;
                 case R.id.navigation_category:
-                    mTextMessage.setText(R.string.title_category);
-                    return true;
+                    fragment=new CategoryFragment();
+                    break;
                 case R.id.navigation_location:
-                    mTextMessage.setText(R.string.title_location);
-                    return true;
+                    break;
             }
-            return false;
+            FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.container,fragment);
+            transaction.commit();
+            return true;
         }
     };
 
@@ -39,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.getMenu().getItem(0).setChecked(true);
+        Fragment fragment=new HomeFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment,fragment.getClass().getSimpleName()).addToBackStack(null).commit();
         BottomNavigationViewHelper.disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }

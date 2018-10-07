@@ -1,9 +1,11 @@
-package com.kharol.sociallabourwelfare;
+package com.kharol.sociallabourwelfare.activities;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.kharol.sociallabourwelfare.R;
 
 public class LoginActivity extends AppCompatActivity {
 

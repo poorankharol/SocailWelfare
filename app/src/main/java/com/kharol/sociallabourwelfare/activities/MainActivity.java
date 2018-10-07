@@ -1,4 +1,4 @@
-package com.kharol.sociallabourwelfare;
+package com.kharol.sociallabourwelfare.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -6,6 +6,9 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.kharol.sociallabourwelfare.helper.BottomNavigationViewHelper;
+import com.kharol.sociallabourwelfare.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                case R.id.navigation_category:
+                    mTextMessage.setText(R.string.title_category);
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.navigation_location:
+                    mTextMessage.setText(R.string.title_location);
                     return true;
             }
             return false;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationViewHelper.disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 

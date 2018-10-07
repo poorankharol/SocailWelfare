@@ -29,4 +29,8 @@
     <color name="outerSpace">#343333</color>
     <color name="lightSky">#fafafa</color>
 
+
+    <color name="appred">#C62828</color>
+    <color name="appredlight">#B71C1C</color>
+
 </resources>

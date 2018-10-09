@@ -5,5 +5,7 @@ public class AppConstant {
 
     public static String LOGIN = BASE_URL + "/Login.php";
     public static String HOME = BASE_URL + "/Dashboard.php";
+    public static String UNSKILLED = BASE_URL + "/unskilled.php";
+
 
 }

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.kharol.socaillabourwelfare.Location_R;
 import com.kharol.sociallabourwelfare.fragment.CategoryFragment;
 import com.kharol.sociallabourwelfare.fragment.HomeFragment;
 import com.kharol.sociallabourwelfare.helper.BottomNavigationViewHelper;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment=new CategoryFragment();
                     break;
                 case R.id.navigation_location:
+                    fragment=new Location_R();
                     break;
             }
             FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();

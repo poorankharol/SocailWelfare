@@ -57,10 +57,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             {
                 Toast.makeText(this, "Enter email!!", Toast.LENGTH_SHORT).show();
             }
-            else if (number.equals("") || number.isEmpty())
-            {
-                Toast.makeText(this, "Enter number!!", Toast.LENGTH_SHORT).show();
-            }
+
+
             else if (password.equals("") || password.isEmpty())
             {
                 Toast.makeText(this, "Enter password!!", Toast.LENGTH_SHORT).show();
@@ -75,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             JSONObject jsonObject=new JSONObject(response);
                             if (jsonObject.getString("status").equals("1"))
                             {
-                                startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+                                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -93,7 +91,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         Map<String,String> stringMap=new HashMap<>();
                         stringMap.put("name",name);
                         stringMap.put("email",email);
-                        stringMap.put("number",number);
+                        stringMap.put("number", number);
                         stringMap.put("password",password);
                         return stringMap;
                     }

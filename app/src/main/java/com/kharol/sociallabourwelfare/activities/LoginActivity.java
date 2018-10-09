@@ -31,7 +31,7 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText edt_email,edt_password;
-    Button login;
+    Button login,btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -41,6 +41,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         edt_password=findViewById(R.id.edt_password);
         login=findViewById(R.id.btnlogin);
         login.setOnClickListener(this);
+        btnRegister=findViewById(R.id.btnRegister);
+        btnRegister.setOnClickListener(this);
     }
 
     @Override
@@ -48,7 +50,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     {
         if (v==login)
         {
-            final String email=edt_email.getText().toString();
+            Intent i=new Intent(LoginActivity.this,MainActivity.class);
+            //i.putExtra("id",id);
+            startActivity(i);
+            /*final String email=edt_email.getText().toString();
             final String password=edt_password.getText().toString();
 //            Log.e("url",AppConstant.LOGIN);
 //            //http://localhost:7080/slw/Login.php
@@ -96,7 +101,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
             };
             RequestQueue requestQueue= Volley.newRequestQueue(LoginActivity.this);
-            requestQueue.add(stringRequest);
+            requestQueue.add(stringRequest);*/
+        }
+        if (v==btnRegister)
+        {
+            startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
         }
     }
 }

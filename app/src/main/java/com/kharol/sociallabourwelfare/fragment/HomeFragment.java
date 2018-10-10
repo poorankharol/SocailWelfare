@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.android.volley.VolleyError;
 import com.kharol.sociallabourwelfare.R;
 import com.kharol.sociallabourwelfare.Service.RequestGenerator;
@@ -17,7 +16,6 @@ import com.kharol.sociallabourwelfare.Service.ResponseListener;
 import com.kharol.sociallabourwelfare.adapter.HomeAdapter;
 import com.kharol.sociallabourwelfare.helper.AppConstant;
 import com.kharol.sociallabourwelfare.model.HomeModel;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

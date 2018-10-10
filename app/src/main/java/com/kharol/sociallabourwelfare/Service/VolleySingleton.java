@@ -8,7 +8,7 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
 /**
- * Created by Bilal on 01/06/2018.
+ *
  */
 public class VolleySingleton {
 	private static VolleySingleton mInstance;

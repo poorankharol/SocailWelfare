@@ -51,7 +51,7 @@ public class UnSkilledFragment extends Fragment {
 
     private void getData()
     {
-        RequestGenerator.makeGetRequest(getActivity(), AppConstant.HOME, true, new ResponseListener() {
+        RequestGenerator.makeGetRequest(getActivity(), AppConstant.UNSKILLED, true, new ResponseListener() {
             @Override
             public void onError(VolleyError error) {
 

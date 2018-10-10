@@ -27,7 +27,7 @@ public class UnskilledAdapter extends RecyclerView.Adapter<UnskilledAdapter.View
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_home, parent, false);
+                .inflate(R.layout.fragment_item_unskilled, parent, false);
 
         return new ViewHolder(itemView);
     }

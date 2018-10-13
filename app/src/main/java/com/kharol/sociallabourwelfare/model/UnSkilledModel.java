@@ -1,6 +1,5 @@
 package com.kharol.sociallabourwelfare.model;
 
-import java.util.Locale;
 
 public class UnSkilledModel {
 

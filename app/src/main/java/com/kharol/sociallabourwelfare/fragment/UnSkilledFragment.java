@@ -42,7 +42,7 @@ public class UnSkilledFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_unskilled, container, false);
-        recyclerView=view.findViewById(R.id.rvv);
+        recyclerView=view.findViewById(R.id.recyclerview);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(mLayoutManager);
         getData();
@@ -80,10 +80,7 @@ public class UnSkilledFragment extends Fragment {
             }
         });
     }
-
-
 }
-
 
 
 

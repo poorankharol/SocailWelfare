@@ -10,4 +10,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+    <string name="namelabel">"Name : "</string>
+    <string name="categorylabel">"Category : "</string>
+    <string name="placelabel">"Place : "</string>
+
 </resources>

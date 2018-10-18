@@ -73,7 +73,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             JSONObject jsonObject=new JSONObject(response);
                             if (jsonObject.getString("status").equals("1"))
                             {
-                                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                                Intent i=new Intent(RegisterActivity.this,LoginActivity.class);
+                                startActivity(i);
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();

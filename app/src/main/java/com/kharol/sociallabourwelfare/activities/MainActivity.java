@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.navigation_category:
-                    fragment=new CategoryFragment();
+                    i =new Intent(MainActivity.this,ListViewLabour.class);
+                    startActivity(i);
                     break;
 
                 case R.id.navigation_location:
